@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaryesh Shukla - Resume</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, hsl(210, 30%, 10%), hsl(210, 30%, 20%));
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        .header {
+            grid-column: span 2;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        h1, h2, h3 {
+            margin: 0;
+            color: hsl(50, 100%, 70%);
+        }
+        .section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        .progress {
+            background: #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        .progress-bar {
+            height: 20px;
+            background: hsl(50, 100%, 70%);
+            transition: width 0.5s;
+        }
+        .projects {
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .projects:hover {
+            transform: scale(1.02);
+        }
+        .contact {
+            grid-column: span 2;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .contact input, .contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 12px;
+            border: none;
+        }
+        .contact button {
+            background: hsl(50, 100%, 70%);
+            border: none;
+            border-radius: 12px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .contact button:hover {
+            background: hsl(50, 100%, 60%);
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const skills = {
+                "Python": 90,
+                "SQL": 80,
+                "HTML/CSS": 85,
+                "Java": 75,
+                "JavaScript": 70,
+                "C": 65,
+                "C++": 60
+            };
+            const projects = [
+                { title: 'Celebrity Image Classifier', url: 'https://github.com/AaryeshShukla/Celebrity-Classifier' },
+                { title: 'QUIZ MASTER V-1', url: 'https://github.com/AaryeshShukla/Quiz-Master---V1' },
+                { title: 'MediCare Pro - Hospital Management System', url: 'https://github.com/AaryeshShukla/MediCare-Pro-Hospital-Management-System' }
+            ];
+            const skillsContainer = document.getElementById('skills');
+            const projectsContainer = document.getElementById('projects');
+            Object.entries(skills).forEach(([skill, value]) => {
+                const progress = document.createElement('div');
+                progress.className = 'progress';
+                progress.innerHTML = `<div class='progress-bar' style='width: ${value}%;'></div>`;
+                skillsContainer.appendChild(progress);
+            });
+            projects.forEach(project => {
+                const projectItem = document.createElement('div');
+                projectItem.className = 'projects';
+                projectItem.innerHTML = `<a href='${project.url}' target='_blank'>${project.title}</a>`;
+                projectsContainer.appendChild(projectItem);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Aaryesh Shukla</h1>
+            <p>Indore, M.P. | +91 9926191143 | aaryeshs@gmail.com | <a href='https://github.com/AaryeshShukla' target='_blank'>Github</a></p>
+        </div>
+        <div class="section">
+            <h2>Education</h2>
+            <p>Diploma in Programming from IIT Madras. May - 2026</p>
+            <p>B. Tech. (CS) IIST (Affiliated to RGPV) (Pursuing), 2023-2027</p>
+            <p>B.S. (Data Science) IIT Madras (Pursuing), 2023-2027</p>
+            <p>Higher Secondary School VIS Indore (M.P.) 2022-2023</p>
+        </div>
+        <div class="section">
+            <h2>Skills Summary</h2>
+            <div id="skills"></div>
+        </div>
+        <div class="section">
+            <h2>Projects</h2>
+            <div id="projects"></div>
+        </div>
+        <div class="section">
+            <h2>Certifications and Participation</h2>
+            <ul>
+                <li>Advanced Certificate in “Machine Learning and Data Science” From IIT Madras.</li>
+                <li>BS Foundational Level: Programming and Data Science from IIT Madras.</li>
+                <li>SQL and Relational Databases 101 – Powered by IBM.</li>
+                <li>Cisco Networking Academy certifications in various AI and Data Science topics.</li>
+                <li>Participated in MOP 3.0 as a Party Member won Best Opening Statement as BRICS alliance.</li>
+                <li>Participated in Banking Industry Workshop in Sanmantrana 2024.</li>
+                <li>Participated in 24 hrs Internal Hackathon organized by IIST Indore.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Research Work</h2>
+            <ul>
+                <li>Shukla, Dr. Rupesh, Shukla, Aaryesh, “Data Science in Healthcare: Leveraging Electronic Health Records for Predictive Analytics”, AUG 2023 | IRE Journals | Volume 7 Issue 2 | ISSN: 2456-8880</li>
+                <li>Shukla, Dr. Rupesh, Shukla, Aaryesh, “Ethical Considerations in Artificial Intelligence: Ensuring Accountability and Transparency”, AUG 2023 | IRE Journals | Volume 7 Issue 2 | ISSN: 24568880</li>
+                <li>Patidar, M., Bhanodia, P., Patel, S., Mishra, D., Shukla, R., Sharma, D. K., Shukla, A., & Tembhurney, M. (2025). Design and exploration of Data-Handling Quantum-Computational computer circuits for the implementation of Ultra-Area and Low-Power devices.</li>
+            </ul>
+        </div>
+        <div class="contact">
+            <h2>Contact Me</h2>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </div>
+    </div>
+</body>
+</html>
